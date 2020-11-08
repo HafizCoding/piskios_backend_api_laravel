@@ -1,0 +1,46 @@
+$table->foreign('id_provider')->references('id')->on('dataprovider');
+$table->foreign('id_nominal')->references('id')->on('nominal');
+
+//struk
+@extends('users.layout')
+  
+@section('content')
+
+<div class="container mt-5">
+    <div class="row justify-content-center align-items-center">
+        <div class="card" style="width: 24rem;">
+            <div class="card-header">
+            Detail User
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                <center>PisKios<br>
+                **namatoko**<br>
+                tanggalTransaksi<br>
+                <br>
+                Struk Pembelian Pulsa Isi ulang
+                -----------------------------------------</center>
+                  <center>  <li class="list-group-item"><b>nohp: </b>{{$user->nohp}}</li></center>
+                <center>-----------------------------------------<br>
+                Terima Kasih<br>Telah Berbelanja, Ditunggu<br> Transaksi Berikutnya</center>
+                </ul>
+            </div>
+            
+            <a class="btn btn-success mt-3" href="{{ route('users.index') }}">Kembali</a>
+            
+        </div>
+    </div>
+</div>
+@endsection
+
+usecase
+erd
+actifity diagram
+mockup(mungkin)
+hosting gratis(wajib)
+perkiraan presentasi jam 8 pagi
+
+link 
+https://laravel.com/docs/8.x/migrations#foreign-key-constraints
+https://laracasts.com/discuss/channels/laravel/string-as-foreign-key-laravel-migration-not-working
+

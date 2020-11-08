@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class Dataprovider extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('dataprovider', function (Blueprint $table) {
+            $table->Increments('id');
+            $table->string('provider')->unsigned();
+            $table->timestamps();
+
+            $table->foreign('provider')->references('id_provider')->on('datapembeli');
+    });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+}

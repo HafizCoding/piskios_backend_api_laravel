@@ -21,7 +21,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 $api = app('Dingo\Api\Routing\Router');
 $api->version('v1', function($api) {
-    // All rouetes goes here
 
 $api->group(['namespace' => 'App\Http\Controllers\Api'], function() use($api) {
 
@@ -37,4 +36,6 @@ $api->group(['namespace' => 'App\Http\Controllers\Api'], function() use($api) {
 
 });
 });
+
+
 
